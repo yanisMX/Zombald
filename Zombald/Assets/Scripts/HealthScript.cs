@@ -15,7 +15,6 @@ public class HealthScript : MonoBehaviour
     private void Start()
     {
         UpdateHeartsUI();
-        
     }
 
     public void TakeDamage(float damage)
@@ -24,11 +23,10 @@ public class HealthScript : MonoBehaviour
         if (_currentHealth < 0) _currentHealth = 0;
         UpdateHeartsUI();
         
-        if (_currentHealth <= 0)
+        if (_currentHealth == 0)
         {
             gameOver.Setup();
         }
-       
     }
     
     public void AddHeartContainer()
